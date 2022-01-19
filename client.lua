@@ -1,0 +1,6 @@
+RegisterNetEvent("salva")
+AddEventHandler("salva", function()
+    local playerPed = PlayerPedId()
+	local playerX, playerY, playerZ = table.unpack(GetEntityCoords(playerPed))
+	TriggerServerEvent("coordenadas", playerX , playerY , playerZ)			
+end)
